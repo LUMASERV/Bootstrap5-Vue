@@ -1,0 +1,23 @@
+{
+  "name": "@lumaserv/bootstrap5-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LUMASERV/Bootstrap5-Vue.git"
+  },
+  "author": "LUMASERV",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/LUMASERV/Bootstrap5-Vue/issues"
+  },
+  "homepage": "https://github.com/LUMASERV/Bootstrap5-Vue#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

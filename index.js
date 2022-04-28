@@ -1,0 +1,17 @@
+import BAlert from  './lib/BAlert.vue'
+import BBadge  from  './lib/BBadge.vue'
+import BButton from  './lib/BButton.vue'
+import BCheck from  './lib/BCheck.vue'
+import BContainer  from  './lib/BContainer.vue'
+import BInput  from  './lib/BInput.vue'
+import BModal  from  './lib/BModal.vue'
+import BRange  from  './lib/BRange.vue'
+import BSelect  from  './lib/BSelect.vue'
+import BTable  from  './lib/BTable.vue'
+import BToast  from  './lib/BToast.vue'
+import BSpinner from './lib/BSpinner.vue'
+import BPagination from './lib/BPagination.vue'
+import BTab from './lib/BTab.vue'
+import BAccordionItem from './lib/BAccordionItem.vue'
+
+export {BAlert, BBadge, BButton, BCheck, BContainer, BInput, BModal, BRange, BSelect, BTable, BToast, BSpinner, BPagination, BTab, BAccordionItem}
