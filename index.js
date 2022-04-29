@@ -13,5 +13,6 @@ import BSpinner from './lib/BSpinner.vue'
 import BPagination from './lib/BPagination.vue'
 import BTab from './lib/BTab.vue'
 import BAccordionItem from './lib/BAccordionItem.vue'
+import BCollapse from './lib/BCollapse.vue'
 
-export {BAlert, BBadge, BButton, BCheck, BContainer, BInput, BModal, BRange, BSelect, BTable, BToast, BSpinner, BPagination, BTab, BAccordionItem}
+export {BAlert, BBadge, BButton, BCheck, BContainer, BInput, BModal, BRange, BSelect, BTable, BToast, BSpinner, BPagination, BTab, BAccordionItem, BCollapse}
