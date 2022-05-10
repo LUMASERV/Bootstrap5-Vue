@@ -31,7 +31,7 @@ export default {
     computed: {
         pivotedPages() {
             const itemCount = Math.min(this.pages, 11)
-            let middle = this.page
+            let middle = this.page.valueOf()
             while(middle - 5 < 1)
                 middle++
             while(middle + 5 > this.pages)
@@ -51,7 +51,8 @@ export default {
             },
             set(val) {
                 this.pagination.page = val
-                this.$emit('change', val)
+                if (this.pagination.page !== val)
+                    this.$emit('change', val)
             }
         }
     },
