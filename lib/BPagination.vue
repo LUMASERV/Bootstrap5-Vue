@@ -40,7 +40,7 @@ export default {
                 middle = 6
             return [...(new Array(itemCount))].map((_, i) => (i + middle - 5))
         },
-        pageCount() {
+        pages() {
             if (this.pagination.pages)
                 return this.pagination.pages
             return Math.ceil(this.pagination.total/this.pagination.page_size)
