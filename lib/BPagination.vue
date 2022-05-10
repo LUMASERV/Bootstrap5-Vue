@@ -6,17 +6,12 @@
                     <fai icon="arrow-left" />
                 </a>
             </li>
-            <template v-if="pageCount <= 10">
-                <li class="page-item" v-for="n in pageCount" :key="n" :class="{'active': n === page}">
-                    <a class="page-link" @click="page = n">{{ n }}</a>
-                </li>
-            </template>
-            <template v-else>
+            <template>
                 <li class="page-item" v-for="n in pivotedPages" :key="n" :class="{'active': n === page}">
                     <a class="page-link" @click="page = n">{{ n }}</a>
                 </li>
             </template>
-            <li class="page-item" :class="{'disabled': page === pageCount}">
+            <li class="page-item" :class="{'disabled': page === pages}">
                 <a  class="page-link" @click="page++">
                     <fai icon="arrow-right" />
                 </a>
@@ -35,10 +30,15 @@ export default {
     },
     computed: {
         pivotedPages() {
-            const firstHalfSize = Math.min(5, this.page - 1) // how much elements should be filled up (5)
-            const firstHalf = [...Array(firstHalfSize).keys()].map(x => this.page - firstHalfSize + x)  // construct left half of pagination
-            const secondHalf = [...Array(9 - firstHalfSize).keys()].map(x => this.page + x + 1) // add right side and add up as much elements, so we always have 10
-            return [...firstHalf, this.page, ...secondHalf] // merge and include current page
+            const itemCount = Math.min(this.pages, 11)
+            let middle = this.page
+            while(middle - 5 < 1)
+                middle++
+            while(middle + 5 > this.pages)
+                middle--
+            if(itemCount < 11)
+                middle = 6
+            return [...(new Array(itemCount))].map((_, i) => (i + middle - 5))
         },
         pageCount() {
             if (this.pagination.pages)
