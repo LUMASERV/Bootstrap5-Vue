@@ -1,7 +1,7 @@
 {
   "name": "@lumaserv/bootstrap5-vue",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bootstrap 5 components for Vue 2",
   "main": "index.js",
   "directories": {
     "lib": "lib"
