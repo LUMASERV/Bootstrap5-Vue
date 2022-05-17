@@ -50,9 +50,10 @@ export default {
                 return this.pagination.page
             },
             set(val) {
-                this.pagination.page = val
-                if (this.pagination.page !== val)
+                if (this.pagination.page !== val) {
+                    this.pagination.page = val
                     this.$emit('change', val)
+                }
             }
         }
     },
