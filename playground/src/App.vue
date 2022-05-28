@@ -30,7 +30,18 @@
             Label
         </b-input>
         <b-check>Test</b-check>
-        <b-select :options="[{ text: 'Gruppe', $options: [ { text: 'A', value: 'Kein A' }, 'B' ] }, 'C']" />
+        <div class="row">
+            <div class="col-6">
+                <b-select :options="[{ text: 'Gruppe', $options: [ { text: 'A', value: 'Kein A' }, 'B' ] }, 'C']">
+                    Test non floating
+                </b-select>
+            </div>
+            <div class="col-6">
+                <b-select :options="[{ text: 'Gruppe', $options: [ { text: 'A', value: 'Kein A' }, 'B' ] }, 'C']" float>
+                    Test floating
+                </b-select>
+            </div>
+        </div>
         <b-range />
         <h2>Toast</h2>
         <b-toast>

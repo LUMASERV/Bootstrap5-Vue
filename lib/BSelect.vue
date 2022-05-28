@@ -1,6 +1,6 @@
 <template>
-    <div class="form-group">
-        <label class="form-label" v-if="$slots.default">
+    <div class="form-group" :class="{'form-floating': float}">
+        <label class="form-label" v-if="$slots.default && !float">
             <slot />
         </label>
         <div class="input-group" v-if="$slots.prepend || $slots.append">
@@ -47,6 +47,9 @@
                 </optgroup>
             </template>
         </select>
+        <label class="form-label" v-if="$slots.default && float" for="whatever">
+            <slot />
+        </label>
     </div>
 </template>
 
@@ -64,6 +67,10 @@ export default {
         size: {
             type: Number,
             default: 0
+        },
+        float: {
+            type: Boolean,
+            value: false
         }
     },
     methods: {
