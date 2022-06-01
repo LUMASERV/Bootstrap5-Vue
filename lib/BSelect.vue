@@ -26,6 +26,7 @@
                 </template>
             </select>
             <span class="input-group-text" v-if="$slots.append"><slot name="append" /></span>
+            <slot name="appendRaw" />
         </div>
         <select v-else class="form-select" v-bind="filter($props, 'options')" v-on="filter($listeners, 'input')" :value="value" @input="e => $emit('input', e.target.value)" :size="size">
             <template v-for="(option, i) in options">
