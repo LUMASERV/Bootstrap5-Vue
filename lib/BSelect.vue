@@ -3,7 +3,7 @@
         <label class="form-label" v-if="$slots.default && !float">
             <slot />
         </label>
-        <div class="input-group" v-if="$slots.prepend || $slots.append">
+        <div class="input-group" v-if="$slots.prepend || $slots.append || $slots.appendRaw">
             <span class="input-group-text" v-if="$slots.prepend"><slot name="prepend" /></span>
             <select class="form-select" v-bind="filter($props, 'options')" v-on="filter($listeners, 'input')" :value="value" @input="e => $emit('input', e.target.value)"  :size="size">
                 <template v-for="(option, i) in options">
