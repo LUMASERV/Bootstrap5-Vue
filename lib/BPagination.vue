@@ -3,7 +3,9 @@
         <ul class="pagination justify-content-center">
             <li class="page-item" :class="{'disabled': page <= 1}">
                 <a class="page-link" @click="page--">
-                    <fai icon="arrow-left" />
+                    <slot name="icon-left">
+                        <fai icon="arrow-left" />   
+                    </slot>
                 </a>
             </li>
             <template>
@@ -13,7 +15,9 @@
             </template>
             <li class="page-item" :class="{'disabled': page === pages}">
                 <a  class="page-link" @click="page++">
-                    <fai icon="arrow-right" />
+                    <slot name="icon-right">
+                        <fai icon="arrow-right" />
+                    </slot>
                 </a>
             </li>
         </ul>
