@@ -52,7 +52,9 @@
         </b-toast>
         <h2>Modals</h2>
         <b-modal v-model="modal" title="Test">A Test</b-modal>
-        <b-btn @click="modal = true">Show Modal</b-btn>
+        <b-btn @click="modal = true" class="me-1">Show Modal</b-btn>
+        <b-modal v-model="validationModal" title="Validation Test" :validate="() => false">This modal won't close because of validate method, which returns false</b-modal>
+        <b-btn @click="validationModal = true" class="ms-1">Show Validation Modal</b-btn>
         <h2>Tabs</h2>
         <b-tab :titles="{test: 'Custom text test'}">
             <template v-slot:test="">
@@ -66,5 +68,10 @@
 </template>
 
 <script>
-
+export default {
+    data: () => ({
+        modal: false,
+        validationModal: false
+    })
+}
 </script>

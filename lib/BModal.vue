@@ -14,7 +14,7 @@
                 <div class="modal-footer" v-if="footer">
                     <slot name="footer" :close="close">
                         <button type="button" class="btn btn-secondary" @click="e => { close(); $emit('cancel') }">Abbrechen</button>
-                        <button type="button" class="btn btn-primary" @click="e => { close(); $emit('ok') }">Ok</button>
+                        <button type="button" class="btn btn-primary" @click="e => { if (validate()) { close(); $emit('ok') }}">Ok</button>
                     </slot>
                 </div>
             </div>
@@ -54,6 +54,10 @@ export default {
         footer: {
             type: Boolean,
             default: true
+        },
+        validate: {
+            type: Function,
+            default: () => true
         }
     },
     methods: {
