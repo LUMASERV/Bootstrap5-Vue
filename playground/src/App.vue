@@ -42,7 +42,15 @@
                 </b-select>
             </div>
         </div>
-        <b-range />
+        <h2>Ranges</h2>
+        <div class="row">
+            <div class="col-6">
+                <b-range />
+            </div>
+            <div class="col-6">
+                <b-range min="1" max="10" v-model="rangeVal">Range test</b-range>
+            </div>
+        </div>
         <h2>Toast</h2>
         <b-toast>
             <template v-slot:header>
@@ -71,7 +79,8 @@
 export default {
     data: () => ({
         modal: false,
-        validationModal: false
+        validationModal: false,
+        rangeVal: 1
     })
 }
 </script>
