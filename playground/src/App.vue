@@ -26,9 +26,18 @@
             </template>
         </b-table>
         <h2>Form</h2>
-        <b-input>
-            Label
-        </b-input>
+        <div class="row">
+            <div class="col-6">
+                <b-input>
+                    Label
+                </b-input>
+            </div>
+            <div class="col-6">
+                <b-input type="password">
+                    Label Password
+                </b-input>
+            </div>
+        </div>
         <b-check>Test</b-check>
         <div class="row">
             <div class="col-6">
