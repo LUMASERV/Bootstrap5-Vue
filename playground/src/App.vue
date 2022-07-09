@@ -37,6 +37,11 @@
                     Label Password
                 </b-input>
             </div>
+            <div class="col-6">
+                <b-textarea>
+                    A Textarea
+                </b-textarea>
+            </div>
         </div>
         <b-check>Test</b-check>
         <div class="row">

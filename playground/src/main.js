@@ -4,7 +4,7 @@ import 'bootstrap'
 import Vue from 'vue'
 import App from './App.vue'
 
-import { BAccordionItem, BAlert, BBadge, BButton, BCheck, BCollapse, BContainer, BInput, BModal, BPagination, BRange, BSelect, BSpinner, BTab, BTable, BToast } from 'bootstrap5-vue'
+import { BAccordionItem, BAlert, BBadge, BButton, BCheck, BCollapse, BContainer, BInput, BModal, BPagination, BRange, BSelect, BSpinner, BTab, BTable, BTextarea, BToast } from 'bootstrap5-vue'
 
 Vue.component('b-container', BContainer)
 Vue.component('b-table', BTable)
@@ -23,6 +23,7 @@ Vue.component('b-pagination', BPagination)
 Vue.component('b-tab', BTab)
 Vue.component('b-accordion-item', BAccordionItem)
 Vue.component('b-collapse', BCollapse)
+Vue.component('b-textarea', BTextarea)
 
 new Vue({
     render: h => h(App)

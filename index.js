@@ -14,5 +14,6 @@ import BPagination from './lib/BPagination.vue'
 import BTab from './lib/BTab.vue'
 import BAccordionItem from './lib/BAccordionItem.vue'
 import BCollapse from './lib/BCollapse.vue'
+import BTextarea from './lib/BTextarea.vue'
 
-export {BAlert, BBadge, BButton, BCheck, BContainer, BInput, BModal, BRange, BSelect, BTable, BToast, BSpinner, BPagination, BTab, BAccordionItem, BCollapse}
+export {BAlert, BBadge, BButton, BCheck, BContainer, BInput, BModal, BRange, BSelect, BTable, BToast, BSpinner, BPagination, BTab, BAccordionItem, BCollapse, BTextarea}
