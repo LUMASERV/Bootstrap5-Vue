@@ -6,6 +6,7 @@
         <div class="input-group" v-if="$slots.prepend || $slots.append || $slots.appendRaw">
             <span class="input-group-text" v-if="$slots.prepend"><slot name="prepend" /></span>
             <select class="form-select" v-bind="filter($props, 'options')" v-on="filter($listeners, 'input')" :value="value" @input="e => $emit('input', e.target.value)"  :size="size">
+                <option v-if="!!placeholder" value="" disabled selected>{{ placeholder }}</option>
                 <template v-for="(option, i) in options">
                     <option
                         v-if="typeof option == 'string' || !('$options' in option)"
@@ -29,6 +30,7 @@
             <slot name="appendRaw" />
         </div>
         <select v-else class="form-select" v-bind="filter($props, 'options')" v-on="filter($listeners, 'input')" :value="value" @input="e => $emit('input', e.target.value)" :size="size">
+            <option v-if="!!placeholder" value="" disabled selected>{{ placeholder }}</option>
             <template v-for="(option, i) in options">
                 <option
                     v-if="typeof option == 'string' || !('$options' in option)"
@@ -72,6 +74,10 @@ export default {
         float: {
             type: Boolean,
             value: false
+        },
+        placeholder: {
+            type: String,
+            default: ''
         }
     },
     methods: {

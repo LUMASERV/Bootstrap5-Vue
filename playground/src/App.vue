@@ -38,9 +38,15 @@
                 </b-input>
             </div>
             <div class="col-6">
-                <b-textarea>
-                    A Textarea
-                </b-textarea>
+              <b-select :options="['a', 'b', 'c']">Select without placeholder</b-select>
+            </div>
+            <div class="col-6">
+              <b-select :options="['a', 'b', 'c']" placeholder="My placeholder">Select with placeholder</b-select>
+            </div>
+            <div class="col-6">
+              <b-textarea>
+                A Textarea
+              </b-textarea>
             </div>
         </div>
         <b-check>Test</b-check>
