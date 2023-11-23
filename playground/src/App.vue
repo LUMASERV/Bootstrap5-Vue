@@ -21,6 +21,9 @@
             { id: 1, first_name: 'Bob', last_name: 'Baker', variant: 'danger' },
             { id: 2, first_name: 'Alice', last_name: 'Adams' }
         ]">
+            <template v-slot:header>
+              Override
+            </template>
             <template v-slot:[`item.actions`]="{item}">
                 <b-btn @click="log(item)" variant="danger" size="sm">Delete</b-btn>
             </template>

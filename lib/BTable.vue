@@ -3,8 +3,10 @@
         <thead>
             <tr>
                 <th v-for="(header, i) in headers" :key="i">
-                    <slot :name="'header.' + (typeof header == 'string' ? header : header.key)" :header="header">
-                        {{ typeof header == 'string' ? header : header.text }}
+                    <slot name="header" :header="header">
+                        <slot :name="'header.' + (typeof header == 'string' ? header : header.key)" :header="header">
+                          {{ typeof header == 'string' ? header : header.text }}
+                        </slot>
                     </slot>
                 </th>
             </tr>
@@ -18,8 +20,10 @@
                 </template>
                 <template v-else>
                     <td v-for="(header, i2) in headers" :key="i2">
-                        <slot :name="'item.' + (typeof header == 'string' ? header : header.key)" :item="entry">
-                            {{ entry[typeof header == 'string' ? header : header.key] }}
+                        <slot name="item" :item="entry" :header="header">
+                            <slot :name="'item.' + (typeof header == 'string' ? header : header.key)" :item="entry">
+                              {{ entry[typeof header == 'string' ? header : header.key] }}
+                            </slot>
                         </slot>
                     </td>
                 </template>
